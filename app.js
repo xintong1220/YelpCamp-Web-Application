@@ -25,9 +25,10 @@ mongoose.Promise = global.Promise;
 
 const databaseUri = process.env.MONGODB_URI || 'mongodb://localhost/yelp_camp';
 
-mongoose.connect(databaseUri, { useMongoClient: true })
+mongoose.connect("mongodb://xintong:1220@ds147118.mlab.com:47118/yelpcamp1220")
       .then(() => console.log(`Database connected`))
       .catch(err => console.log(`Database connection error: ${err.message}`));
+//mongodb://xintong:1220@ds147118.mlab.com:47118/yelpcamp1220
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
